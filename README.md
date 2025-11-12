@@ -403,22 +403,6 @@ npx hardhat test
 
 This project is licensed under the MIT License.
 
-## 👥 Project Team
-
-- Aditya Goyal (Reg. No. 230953554)
-- Saurabh Pandit Rathod (Reg. No. 230953482)
-- Devesh Pillai (Reg. No. 230953350)
-
-## 🎓 Academic Institution
-
-Manipal Academy of Higher Education (MAHE), Manipal, Karnataka, India
-School of Computer Engineering
-Manipal Institute of Technology
-
-Under the guidance of:
-- Dr. Raviraj Holla (Lab Faculty 1)
-- Dr. ABC (Lab Faculty 2)
-
 ## ⚠️ Important Notes
 
 1. **Security**: Never commit `.env` file with real credentials
