@@ -1,0 +1,152 @@
+# Backend Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+ENV/
+env/
+.venv
+
+# Flask
+instance/
+.webassets-cache
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Environment
+.env
+.env.local
+.env.*.local
+config/secrets.json
+
+# Frontend Node
+node_modules/
+npm-debug.log
+yarn-error.log
+build/
+dist/
+.next/
+out/
+
+# React
+.cache/
+.parcel-cache
+.cache-loader
+coverage/
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+mongo_data/
+mongodb_data/
+
+# Blockchain
+ganache-cli/
+.ganache
+
+# Sensitive files
+*.key
+*.pem
+private_key
+secrets.json
+config/credentials.json
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# IDE specific
+.vscode/settings.json
+.vscode/launch.json
+
+# AWS
+.aws/
+
+# Azure
+azure-pipelines.yml
+
+# CI/CD
+.github/workflows/secrets.yml
+.gitlab-ci.yml.private
+
+# Documentation build
+docs/_build/
+site/
+
+# Package managers
+package-lock.json
+yarn.lock
+Pipfile.lock
+
+# Compiled contracts (if using truffle/hardhat)
+artifacts/
+cache/
+contracts/build/
+
+# Coverage reports
+coverage.xml
+htmlcov/
+
+# Performance
+.cache
+profiler_results/
+
+# Misc
+*.orig
+*.rej
+*.swp
+*.swo
+*~
+.vscode
+.idea

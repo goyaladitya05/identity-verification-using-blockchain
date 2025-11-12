@@ -1,0 +1,29 @@
+.dashboard-container {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.credentials-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.credential-item {
+  background-color: #f9f9f9;
+  border-left: 4px solid #667eea;
+}
+
+.credential-item code.full-hash {
+  word-break: break-all;
+  display: block;
+}
+
+.credentials-list {
+  z-index: 1;
+}
+
+.quick-actions {
+  position: sticky;
+  top: 20px;
+}

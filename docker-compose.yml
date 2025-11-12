@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: identity-mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - identity-network
+
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    container_name: identity-ganache
+    ports:
+      - "8545:8545"
+    networks:
+      - identity-network
+    command: ganache-cli --host 0.0.0.0 --deterministic
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: identity-backend
+    ports:
+      - "5000:5000"
+    environment:
+      FLASK_ENV: development
+      MONGODB_URI: mongodb://admin:password@mongodb:27017
+      WEB3_PROVIDER_URI: http://ganache:8545
+      SECRET_KEY: docker-secret-key
+      JWT_SECRET: docker-jwt-secret
+    depends_on:
+      - mongodb
+      - ganache
+    networks:
+      - identity-network
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: identity-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      REACT_APP_API_URL: http://localhost:5000/api
+    depends_on:
+      - backend
+    networks:
+      - identity-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  identity-network:
+    driver: bridge
